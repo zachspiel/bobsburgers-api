@@ -12,7 +12,7 @@
     "build": "tsc",
     "postinstall": "tsc",
     "start": "nodemon src/server.ts",
-    "test": "nyc --reporter=json-summary mocha -r ts-node/register 'src/test/*.ts' --timeout 5000 --exit",
+    "test": "nyc --reporter=json-summary mocha -r ts-node/register 'src/test/*.ts' --timeout 10000 --exit",
     "coverage:badge": "coverage-badge-creator"
   },
   "dependencies": {

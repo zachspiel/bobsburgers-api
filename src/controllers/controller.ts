@@ -24,6 +24,8 @@ const ROUTES = [
   "burgerOfTheDay",
 ];
 
+const MAX_DOCUMENTS = 600;
+
 const models = {
   characters: Characters,
   episodes: Episodes,
@@ -114,7 +116,7 @@ const getData = async (
       return await model
         .find(data, "-_id")
         .sort(options.sort ?? { id: 1 })
-        .limit(options.limit ?? 502)
+        .limit(options.limit ?? MAX_DOCUMENTS)
         .skip(options.skip ?? 0);
     }
   }
